@@ -1,0 +1,48 @@
+
+// upload faculty sdp data
+POST http://localhost:4000/faculty-api/sdpdata
+Content-Type: application/json
+
+{
+    "sdpId":"390U91",
+    "facultyId":"2071A5673",
+    "title":"Blockchain Technology",
+    "topic":"",
+    "startDate":"",
+    "endDate":"",
+    "organizedBy":"",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "status":true
+}
+
+
+###
+// upload faculty review data
+
+POST http://localhost:4000/faculty-api/reviewdata
+Content-Type: application/json
+
+{
+    "revId":"",
+    "facultyId":"2071A5673",
+    "title":"Functions",
+    "roles":[],
+    "startDate":"",
+    "endDate":"",
+    "organizedBy":"",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "status":true
+}
+
+
+###
+// get sdp data
+
+GET http://localhost:4000/faculty-api/sdpdata/Vishesh
+
+###
+// get review data
+
+GET http://localhost:4000/faculty-api/reviewdata/Vishesh
