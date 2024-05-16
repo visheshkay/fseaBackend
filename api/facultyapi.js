@@ -36,21 +36,21 @@ facultyApp.post('/reviewdata',expressAsyncHandler(async(req,res)=>{
 }))
 
 // get faculty sdp data
-facultyApp.get('/sdpdata/:name',expressAsyncHandler(async(req,res)=>{
+facultyApp.get('/sdpdata/:id',expressAsyncHandler(async(req,res)=>{
     // get facultyname
-    const User=req.params.name
+    const fid=req.params.id
     // get all sdp data
-    let List=await sdpcollection.find({$and:[{name:User}]}).toArray()
+    let List=await sdpcollection.find({$and:[{facultyId:fid}]}).toArray()
     // send res
     res.send({message:"List of data",payload:List})
 }))
 
 // get faculty review data
-facultyApp.get('/reviewdata/:name',expressAsyncHandler(async(req,res)=>{
+facultyApp.get('/reviewdata/:id',expressAsyncHandler(async(req,res)=>{
     // get facultyname
-    const User=req.params.name
+    const fid=req.params.id
     // get all review data
-    let List=await reviewcollection.find({$and:[{name:User}]}).toArray()
+    let List=await reviewcollection.find({$and:[{facultyId:fid}]}).toArray()
     // send res
     res.send({message:"List of data",payload:List})
 }))

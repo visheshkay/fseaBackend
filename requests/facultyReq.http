@@ -4,7 +4,7 @@ POST http://localhost:4000/faculty-api/sdpdata
 Content-Type: application/json
 
 {
-    "sdpId":"390U91",
+    "sdpId":"{{$timestamp}}",
     "facultyId":"2071A5673",
     "title":"Blockchain Technology",
     "topic":"",
@@ -24,7 +24,7 @@ POST http://localhost:4000/faculty-api/reviewdata
 Content-Type: application/json
 
 {
-    "revId":"",
+    "revId":"{{$timestamp}}",
     "facultyId":"2071A5673",
     "title":"Functions",
     "roles":[],
@@ -40,9 +40,9 @@ Content-Type: application/json
 ###
 // get sdp data
 
-GET http://localhost:4000/faculty-api/sdpdata/Vishesh
+GET http://localhost:4000/faculty-api/sdpdata/2071A5673
 
 ###
 // get review data
 
-GET http://localhost:4000/faculty-api/reviewdata/Vishesh
+GET http://localhost:4000/faculty-api/reviewdata/2071A5673
