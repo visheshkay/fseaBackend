@@ -1,9 +1,0 @@
-GET http://localhost:4000/admin-api/get-sdp-records
-###
-GET http://localhost:4000/admin-api/get-sdp-records/22A1578
-###
-GET http://localhost:4000/admin-api/get-review-records
-###
-GET http://localhost:4000/admin-api/get-review-records/22A1578
-###
-GET http://localhost:4000/admin-api/get-all-faculty-records
